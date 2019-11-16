@@ -1,0 +1,37 @@
+###########
+## SETUP ##
+###########
+
+1. Create a React app
+    $ npx create-react-app <app-title>
+
+2. Delete all files inside ./src folder
+
+3. Create Components folder in your ./src folder
+
+4. Create an App.js file in your Components folder with the following code:
+import React from 'react';
+
+const App = () => {
+    return <div>App</div>
+}
+
+export default App;
+
+5. Create an index.js file in your ./src folder and import the App component:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './Components/App';
+
+ReactDOM.render( <App />, document.querySelector('#root'));
+
+6. Start your application
+    $ npm start 
+
+7. Create other components as needed.
+
+###############
+## API SETUP ##
+###############
+
+1. 
