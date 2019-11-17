@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import axios from 'axios';
-import keys from '../unsplash';
+import keys from '../unsplashKeys';
 
 class App extends React.Component {
 
