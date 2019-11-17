@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # other
-unsplash.js
+/src/unsplashKeys.js

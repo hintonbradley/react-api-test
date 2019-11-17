@@ -34,4 +34,38 @@ ReactDOM.render( <App />, document.querySelector('#root'));
 ## API SETUP ##
 ###############
 
-1. 
+1. Setup your API developer account, and get your account keys if requiered.
+2. Add your https library if needed. 
+    $  npm i --s axios
+3. In your component that makes the http request, add your endpoint to the network request and your data (params, headers, authorization, etc.) to make your request, and test it in your browser using the networks tab.
+axios.get('https://api.unsplash.com/search/photos', {
+    params: {
+        query: term
+    },
+    headers: {
+        Authorization: 'Client-ID ' + keys.accessKey
+    }
+})
+
+4. Add async and await to http request to hold response.
+...
+async onSearchSubmit(term) {
+    const resp = await axios.get('https://api.unsplash.com/search/photos', { 
+    ...
+
+5. Initialize and update state once a response is received in order to show data.
+    ...
+    state = {
+        images: []
+    }
+    ...
+    })
+        
+        this.setState({ images: resp.data.results})
+    ...
+    
+6. Update the http method so that we can still keep the context of this (as arrow function with async)
+    ...
+    onSearchSubmit = async (term) => {
+        const resp = await axios.get('https://api.unsplash.com/search/photos', {
+    ...
